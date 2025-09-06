@@ -31,7 +31,7 @@ Run:
 npm run dev
 
 
-📮 API Endpoints
+API Endpoints
 
 Endpoint	Method	Auth	Body/Params	Description
 /auth/register	POST	❌	{ name, email, password }	Register a new user
@@ -48,13 +48,11 @@ Endpoint	Method	Auth	Body/Params	Description
 /transactions	GET	✅	–	Get all transactions
 /reports/history/:contactId	GET	✅	–	Transaction history for a contact
 
-🧪 Testing
-
+Testing
 Import Inventory.postman_collection.json into Postman.
 Use Register/Login to get a token, then test protected routes.
 
-✨ Demo Data (Seeder)
-
+Demo Data (Seeder)
 Run node seeder.js to insert:
 2 Products: Laptop, Phone
 2 Contacts: Vendor (TechVendor), Customer (John Doe)
