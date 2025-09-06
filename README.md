@@ -32,7 +32,6 @@ npm run dev
 
 
 API Endpoints
-
 Endpoint	Method	Auth	Body/Params	Description
 /auth/register	POST	❌	{ name, email, password }	Register a new user
 /auth/login	POST	❌	{ email, password }	Login and get JWT
@@ -47,6 +46,16 @@ Endpoint	Method	Auth	Body/Params	Description
 /transactions	POST	✅	{ type, contactId, products:[{productId, quantity}] }	Create sale/purchase
 /transactions	GET	✅	–	Get all transactions
 /reports/history/:contactId	GET	✅	–	Transaction history for a contact
+
+Example Workflow (Quick Test)
+Register a new user → /auth/register
+Login → copy JWT token
+Add Product (e.g., Laptop) → /products
+Add Contact (Customer: John Doe / Vendor: TechVendor) → /contacts
+Create Sale Transaction (Laptop sold to John Doe) → /transactions
+Check Transactions → /transactions
+Get Report (John Doe’s history) → /reports/history/:contactId
+This covers full flow: Auth → Product → Contact → Transaction → Report
 
 Testing
 Import Inventory.postman_collection.json into Postman.
